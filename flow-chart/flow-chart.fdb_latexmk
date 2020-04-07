@@ -1,11 +1,15 @@
 # Fdb version 3
-["pdflatex"] 1586266649 "flow-chart.tex" "flow-chart.pdf" "flow-chart" 1586266649
+["pdflatex"] 1586274232 "flow-chart.tex" "flow-chart.pdf" "flow-chart" 1586274232
   "/etc/texmf/web2c/texmf.cnf" 1556320617 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1480098689 2172 fd0c924230362ff848a33632ed45dc23 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1480098689 4524 6bce29db5bc272ba5f332261583fee9c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm" 1480098689 2124 2601a75482e9426d33db523edf23570a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm" 1480098689 4408 25b74d011a4c66b7f212c0cc3c90061b ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1480098746 44729 811d6c62865936705a31c797a1d5dada ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb" 1480098746 46026 6dab18b61c907687b520c72847215a68 ""
+  "/usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf" 1480098758 1372 788387fea833ef5963f4c5bffe33eb89 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf" 1480098758 1380 0ea3a3370054be6da6acd929ec569f06 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1480098806 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1480098815 1458 43ab4710dc82f3edeabecd0d099626b2 ""
@@ -122,9 +126,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1556320680 2700761 ac0584cc9514ab21918550a6948c4ee2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1556320704 4127052 41bc5cf5bd86bf26f10260443cd3ab84 ""
-  "flow-chart.aux" 1586266649 8 a94a2480d3289e625eea47cd1b285758 ""
-  "flow-chart.tex" 1586266641 2423 a174af781d6cddaee3a5cb7eb27bb348 ""
+  "flow-chart.aux" 1586274232 8 a94a2480d3289e625eea47cd1b285758 ""
+  "flow-chart.tex" 1586274228 5233 c5505e6c1af7f484ab02638af4ee2b3b ""
   (generated)
-  "flow-chart.pdf"
-  "flow-chart.log"
   "flow-chart.aux"
+  "flow-chart.log"
+  "flow-chart.pdf"

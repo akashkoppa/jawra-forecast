@@ -2,7 +2,7 @@
 % TeX template to create a flow chart 
 %----------------Preamble-------------------%
 \documentclass{minimal}
-\usepackage[paperwidth=230mm,paperheight=150mm,margin=1mm]{geometry}
+\usepackage[paperwidth=230mm,paperheight=160mm,margin=1mm]{geometry}
 \usepackage{tikz}
 \usepackage{amsmath,bm,times}
 \usepackage{verbatim}
@@ -21,55 +21,131 @@
 % Building blocks
     \tikzstyle{blocklarge}  =   [draw, 
                                  minimum width=70mm,
-                                 minimum height=10mm,
+                                 minimum height=5mm,
                                  text width=65mm,
                                  text centered
                                 ]
     \tikzstyle{blockmed}    =   [draw,
                                  minimum width=30mm,
-                                 minimum height=30mm,
+                                 minimum height=5mm,
                                  text width=25mm,
                                  text centered
                                 ]
     \tikzstyle{blocksmall}  =   [draw,
                                  minimum width=15mm,
-                                 minimum height=10mm,
+                                 minimum height=5mm,
                                  text width=10mm,
                                  text centered
                                  ]
 % Distances
 \def\distsmall{15mm}
-\def\distmed{35mm}
+\def\distmed{30mm}
 \def\distlarge{75mm}
+\def\vdistsmall{5mm}
+\def\vdistlarge{65mm}
 % The final block diagram
         \begin{tikzpicture}
-% Earth Observations Module
+%%----------------- Earth Observations Module
+% Header
             \node   (eosmodule) 
                     [blocklarge,
                      fill=blue!20
                     ] 
-                    {Earth Observations Module};
+                    {\textbf{Earth Observations Module}};
+ % List of Precipitation (P) Datasets 
+            \path   (eosmodule.south east)+(-0.5*\distmed,-4*\vdistsmall)  
+                    node (pdata)
+                    [blockmed,
+                     fill=blue!20
+                    ]
+                    {\textbf{P Datasets} \\
+                      CHIRPS.v2.0  \\
+                      CMORPH  \\
+                      PERSIANN \\
+                      PERSIANN.CDR \\
+                      PERSIANN.CCS \\
+                      TRMM.3B42RT \\
+                      TRMM.3B43
+                    };
 
-% Climate Forecasting Module
-            \node   (climforecast) 
+% List of Evapotranspiration (ET) Datasets 
+            \path   (eosmodule.south west)+(0.5*\distmed,-4*\vdistsmall)  
+                    node (etdata)
+                    [blockmed,
+                     fill=blue!20
+                    ]
+                    {\textbf{ET Datasets} \\
+                      AVHRR.NTSG  \\
+                      BESS \\
+                      CSIRO.PML \\
+                      FluxCom.RS \\
+                      GLEAM \\
+                      MODIS.MOD16 \\
+                      SSEBOp.v4.0
+                    };
+
+% Selection of the Best P and ET Datasets using the Budyko function
+            \node   (budyko)
+                    [blocklarge,
+                     fill=blue!20,
+                     below of=eosmodule,
+                     node distance=0.65*\distlarge
+                    ]
+                    {\textbf{Selection of P and ET Datasets based on the Budyko hypothesis} \\
+                    (Koppa and Gebremichael, 2017)
+                    };
+
+% Best P and ET Datasets 
+            \path   (budyko.south west)+(0.5*\distmed,-1.1*\vdistsmall)  
+                    node (bestet)
+                    [blockmed,
+                     fill=blue!20
+                    ]
+                    {\textbf{Best ET Dataset} \\
+                        (GLEAM) 
+                    };
+
+            \path   (budyko.south east)+(-0.5*\distmed,-1.1*\vdistsmall)  
+                    node (bestp)
+                    [blockmed,
+                     fill=blue!20
+                    ]
+                    {\textbf{Best P Dataset} \\
+                      TRMM.3B42RT
+                    };
+%%----------------- Climate Forecasting Module
+            \node   (climmodule) 
                     [blocklarge,
                      fill=green!20,
                      right of=eosmodule, 
                      node distance=\distlarge] 
                     {Climate Forecasting Module};
 
-% Hydrologic Forecasting Module
-            \node   (hydforecast) 
+%%----------------- Hydrologic Forecasting Module
+            \node   (hydmodule) 
                     [blocklarge,
-                     fill=green!20,
-                     below of=climforecast, 
-                     node distance=\distlarge] 
-                    {Climate Forecasting Module};
+                     fill=brown!20,
+                     below of=climmodule, 
+                     node distance=\vdistlarge] 
+                    {Hydrologic Forecasting Module};
 
-% Optimization Module
-            
+%%----------------- Optimization Module
+            \node   (optmodule)
+                    [blocklarge,
+                     fill=red!20,
+                     right of=climmodule,
+                     node distance=\distlarge
+                    ]
+                    {Optimization Module};
 
-% Visualization Module         
+%%----------------- Visualization Module
+            \node   (vismodule)
+                    [blocklarge,
+                     fill=blue!50,
+                     below of=optmodule,
+                     node distance=\vdistlarge
+                    ]
+                    {Visualization Module};
 
 
         \end{tikzpicture}
