@@ -19,6 +19,12 @@
 
 % Create required blocks for the different parts
 % Building blocks
+    \tikzstyle{blocklarge1} =   [draw, 
+                                 minimum width=145mm,
+                                 minimum height=5mm,
+                                 text width=65mm,
+                                 text centered
+                                ]
     \tikzstyle{blocklarge}  =   [draw, 
                                  minimum width=70mm,
                                  minimum height=5mm,
@@ -32,7 +38,7 @@
                                  text centered
                                 ]
     \tikzstyle{blocksmall}  =   [draw,
-                                 minimum width=15mm,
+                                 minimum width=22mm,
                                  minimum height=5mm,
                                  text width=10mm,
                                  text centered
@@ -42,7 +48,7 @@
 \def\distmed{30mm}
 \def\distlarge{75mm}
 \def\vdistsmall{5mm}
-\def\vdistlarge{65mm}
+\def\vdistlarge{70mm}
 % The final block diagram
         \begin{tikzpicture}
 %%----------------- Earth Observations Module
@@ -53,7 +59,7 @@
                     ] 
                     {\textbf{Earth Observations Module}};
  % List of Precipitation (P) Datasets 
-            \path   (eosmodule.south east)+(-0.5*\distmed,-4*\vdistsmall)  
+            \path   (eosmodule.south east)+(-0.5*\distmed,-3.7*\vdistsmall)  
                     node (pdata)
                     [blockmed,
                      fill=blue!20
@@ -69,7 +75,7 @@
                     };
 
 % List of Evapotranspiration (ET) Datasets 
-            \path   (eosmodule.south west)+(0.5*\distmed,-4*\vdistsmall)  
+            \path   (eosmodule.south west)+(0.5*\distmed,-3.75*\vdistsmall)  
                     node (etdata)
                     [blockmed,
                      fill=blue!20
@@ -89,7 +95,7 @@
                     [blocklarge,
                      fill=blue!20,
                      below of=eosmodule,
-                     node distance=0.65*\distlarge
+                     node distance=0.62*\distlarge
                     ]
                     {\textbf{Selection of P and ET Datasets based on the Budyko hypothesis} \\
                     (Koppa and Gebremichael, 2017)
@@ -102,7 +108,7 @@
                      fill=blue!20
                     ]
                     {\textbf{Best ET Dataset} \\
-                        (GLEAM) 
+                       GLEAM 
                     };
 
             \path   (budyko.south east)+(-0.5*\distmed,-1.1*\vdistsmall)  
@@ -114,39 +120,123 @@
                       TRMM.3B42RT
                     };
 %%----------------- Climate Forecasting Module
+% Header 
             \node   (climmodule) 
                     [blocklarge,
                      fill=green!20,
                      right of=eosmodule, 
                      node distance=\distlarge] 
-                    {Climate Forecasting Module};
-
-%%----------------- Hydrologic Forecasting Module
-            \node   (hydmodule) 
+                     {\textbf{Climate Forecasting Module}};
+% S2S Forecasts 
+            \path   (climmodule.south east)+(-0.5*\distmed,-2.5*\vdistsmall)  
+                    node (s2sdata)
+                    [blockmed,
+                     fill=green!20
+                    ]
+                    {\textbf{S2S Forecasts} \\
+                      TIGGE  \\
+                      NCEP   \\
+                      ECMWF  
+                    };
+                
+% Seasonal Forecasts 
+            \path   (climmodule.south west)+(0.5*\distmed,-2.5*\vdistsmall)  
+                    node (sdata)
+                    [blockmed,
+                     fill=green!20
+                    ]
+                    {\textbf{Seasonal Forecasts} \\
+                      NMME  \\
+                      ECMWF-SEAS5 \\
+                      GloSea5
+                    };
+                     
+% Calibration of Forecasts 
+            \path   (climmodule.south)+(0,-6.0*\vdistsmall)  
+                    node (calibclim)
                     [blocklarge,
-                     fill=brown!20,
-                     below of=climmodule, 
-                     node distance=\vdistlarge] 
-                    {Hydrologic Forecasting Module};
+                     fill=green!20
+                    ]
+                    {\textbf{Calibration of Forecasts Using Bayesian Model Averaging} \\
+                    };
 
-%%----------------- Optimization Module
-            \node   (optmodule)
+% Deterministic and Stochastic Forecasts
+% DET
+            \path   (calibclim.south west)+(-11+\distsmall,-2.97*\vdistsmall)  
+                    node (det)
+                    [blocksmall,
+                     fill=green!20
+                    ]
+                    {\textbf{DET} \\
+                      Single BMA Forecast
+                    };
+% SPWR-D
+            \path   (calibclim.south)+(0,-2.97*\vdistsmall)  
+                    node (spwrd)
+                    [blocksmall,
+                     fill=green!20
+                    ]
+                    {\textbf{SPWRD} \\
+                      BMA + Raw Forecast 
+                    };
+% SPWR-S
+            \path   (calibclim.south east)+(-2.25*\vdistsmall,-2.97*\vdistsmall)  
+                    node (spwrs)
+                    [blocksmall,
+                     fill=green!20
+                    ]
+                    {\textbf{SPWRS} \\
+                      Raw Forecasts
+                    };
+            
+%%----------------- Visualization Module
+            \node   (vismodule)
                     [blocklarge,
                      fill=red!20,
                      right of=climmodule,
                      node distance=\distlarge
                     ]
-                    {Optimization Module};
+                    {\textbf{Visualization Module}};
 
-%%----------------- Visualization Module
-            \node   (vismodule)
+%%----------------- Optimization Module
+            \node   (optmodule)
                     [blocklarge,
                      fill=blue!50,
-                     below of=optmodule,
+                     below of=vismodule,
                      node distance=\vdistlarge
                     ]
-                    {Visualization Module};
+                    {\textbf{Optimization Module}};
 
+%%----------------- Hydrologic Forecasting Module
+            \node   (hydmodule) 
+                    [blocklarge1,
+                     fill=brown!20,
+                     left of=optmodule,
+                     node distance=1.6*\vdistlarge] 
+                     {\textbf{Hydrologic Forecasting Module}};
+
+            \begin{pgfonlayer}{background}
+ %%----------------- Earth Observations Module (Background)
+                \path[fill=blue!10,
+                      rounded corners,
+                      draw=black!50,
+                      dashed
+                     ]
+                     (bestet.south west)+(-0.2*\vdistsmall,-0.2*\vdistsmall)
+                     rectangle
+                     (3.63,0.35);
+
+%%------------------ Climate Forecasting Module (Background)
+                \path[fill=green!10,
+                      rounded corners,
+                      draw=black!50,
+                      dashed
+                     ]
+                     (det.south west)+(-0.2*\vdistsmall,-0.2*\vdistsmall)
+                     rectangle
+                     (11.13,0.35);
+
+            \end{pgfonlayer}
 
         \end{tikzpicture}
 
