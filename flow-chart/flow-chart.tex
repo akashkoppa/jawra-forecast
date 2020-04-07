@@ -1,0 +1,79 @@
+% -*- TeX:US -*-
+% TeX template to create a flow chart 
+%----------------Preamble-------------------%
+\documentclass{minimal}
+\usepackage[paperwidth=230mm,paperheight=150mm,margin=1mm]{geometry}
+\usepackage{tikz}
+\usepackage{amsmath,bm,times}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usetikzlibrary{shapes,arrows,shapes.geometric}
+
+
+\begin{document}
+% set layers to draw the block diagrams
+    \pgfdeclarelayer{background}
+    \pgfdeclarelayer{foreground}
+    \pgfsetlayers{background,main,foreground}
+
+% Create required blocks for the different parts
+% Building blocks
+    \tikzstyle{blocklarge}  =   [draw, 
+                                 minimum width=70mm,
+                                 minimum height=10mm,
+                                 text width=65mm,
+                                 text centered
+                                ]
+    \tikzstyle{blockmed}    =   [draw,
+                                 minimum width=30mm,
+                                 minimum height=30mm,
+                                 text width=25mm,
+                                 text centered
+                                ]
+    \tikzstyle{blocksmall}  =   [draw,
+                                 minimum width=15mm,
+                                 minimum height=10mm,
+                                 text width=10mm,
+                                 text centered
+                                 ]
+% Distances
+\def\distsmall{15mm}
+\def\distmed{35mm}
+\def\distlarge{75mm}
+% The final block diagram
+        \begin{tikzpicture}
+% Earth Observations Module
+            \node   (eosmodule) 
+                    [blocklarge,
+                     fill=blue!20
+                    ] 
+                    {Earth Observations Module};
+
+% Climate Forecasting Module
+            \node   (climforecast) 
+                    [blocklarge,
+                     fill=green!20,
+                     right of=eosmodule, 
+                     node distance=\distlarge] 
+                    {Climate Forecasting Module};
+
+% Hydrologic Forecasting Module
+            \node   (hydforecast) 
+                    [blocklarge,
+                     fill=green!20,
+                     below of=climforecast, 
+                     node distance=\distlarge] 
+                    {Climate Forecasting Module};
+
+% Optimization Module
+            
+
+% Visualization Module         
+
+
+        \end{tikzpicture}
+
+
+
+\end{document}
