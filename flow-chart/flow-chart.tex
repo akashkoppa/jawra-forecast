@@ -215,6 +215,17 @@
                      node distance=1.6*\vdistlarge] 
                      {\textbf{Hydrologic Forecasting Module}};
 
+% Model Calibration
+            \path   (climmodule.south)+(0,-6.0*\vdistsmall)  
+                    node (calibclim)
+                    [blocklarge,
+                     fill=green!20
+                    ]
+                    {\textbf{Calibration of Forecasts Using Bayesian Model Averaging} \\
+                    };
+            
+
+
             \begin{pgfonlayer}{background}
  %%----------------- Earth Observations Module (Background)
                 \path[fill=blue!10,
