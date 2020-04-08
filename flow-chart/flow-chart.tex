@@ -375,6 +375,10 @@
             \path [draw=red!70, ->, dashed,  line width=0.5mm] (bestp.south)  --  (setuphydro.north -| bestp.south);
             %\path [draw=red!70, ->] (pdata.east)   --  (sdata.west |- pdata.east);
             \path [draw=red!70, ->, dashed,  line width=0.5mm] (pdata.east)  -| (calibclim.north);
+            
+            \path [draw=red!70, ->, dashed,  line width=0.5mm] (det.south)  -- (hydrofor.north -| det.south);
+            \path [draw=red!70, ->, dashed,  line width=0.5mm] (spwrd.south)  -- (hydrofor.north -| spwrd.south);
+            \path [draw=red!70, ->, dashed,  line width=0.5mm] (spwrs.south)  -- (hydrofor.north -| spwrs.south);
 
             \path [draw=red!70, ->, dashed,  line width=0.5mm] (calibhydro.east) -- (dethydro.west |- calibhydro.east); 
             \path [draw=red!70, ->, dashed,  line width=0.5mm] (hydrofor.east) -- (optone.west |- hydrofor.east); 
