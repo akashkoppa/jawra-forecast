@@ -194,9 +194,29 @@
                     [blocklarge,
                      fill=red!20,
                      right of=climmodule,
-                     node distance=\distlarge
+                     node distance=0.99*\distlarge
                     ]
                     {\textbf{Visualization Module}};
+
+            \path   (vismodule.south)+(0,-1.5*\vdistsmall)  
+                    node (dsstool)
+                    [blocklarge,
+                     fill=red!20
+                    ]
+                    {\textbf{Web-based Decision Support Tool For Hydropower Planning} \\
+                    };
+
+            \path   (vismodule.south)+(0,-5*\vdistsmall)  
+                    node (dssfeatures)
+                    [blocklarge,
+                     fill=red!20
+                    ]
+                    {\textbf{Features} \\
+                        GIS-based Graphical User Interface \\
+                        Access to Climate Forecasts \\
+                        Access to Hydrologic Forecasts \\
+                        Compare Different Hydropower Scenarios
+                    };
 
 %%----------------- Optimization Module
             \node   (optmodule)
@@ -207,6 +227,22 @@
                     ]
                     {\textbf{Optimization Module}};
 
+            \path   (vismodule.south)+(0.0,-1.15*\vdistlarge)  
+                    node (optone)
+                    [blocklarge,
+                     fill=blue!50
+                    ]
+                    {\textbf{Optimize Hydropower Using Stochastic Programming for Different SF Forecast Scenarios } \\
+                     (Akash Koppa et al. 2018)
+                    };
+            
+            \path   (vismodule.south)+(0.0,-1.4*\vdistlarge)  
+                    node (opttwo)
+                    [blocklarge,
+                     fill=blue!50
+                    ]
+                    {\textbf{Optimized Hydropower Production Scenarios for Decision Making}
+                    };
 %%----------------- Hydrologic Forecasting Module
             \node   (hydmodule) 
                     [blocklarge1,
@@ -216,14 +252,69 @@
                      {\textbf{Hydrologic Forecasting Module}};
 
 % Model Calibration
-            \path   (climmodule.south)+(0,-6.0*\vdistsmall)  
-                    node (calibclim)
+            \path   (eosmodule.south)+(0.07,-1.1*\vdistlarge)  
+                    node (setuphydro)
                     [blocklarge,
-                     fill=green!20
+                     fill=brown!20
                     ]
-                    {\textbf{Calibration of Forecasts Using Bayesian Model Averaging} \\
+                    {\textbf{Setup of Noah-MP model for Study Domain Using NASA-LIS} \\
                     };
             
+            \path   (eosmodule.south)+(0.07,-1.3*\vdistlarge)  
+                    node (calibhydro)
+                    [blocklarge,
+                     fill=brown!20
+                    ]
+                    {\textbf{Calibration of the Noah-MP model using Bayesian Algorithm DREAM} \\
+                        (Koppa et al. 2019)
+                    };
+
+            \path   (eosmodule.south)+(0.07,-1.5*\vdistlarge)  
+                    node (selectparam)
+                    [blocklarge,
+                     fill=brown!20
+                    ]
+                    {\textbf{Selection of Behavioral Parameters for Streamflow Forecasting}
+                    };
+% Hydrologic Forecasting 
+            \path   (climmodule.south)+(0.07,-1.123*\vdistlarge)  
+                    node (hydrofor)
+                    [blocklarge,
+                     fill=brown!20
+                    ]
+                    {\textbf{Run Noah-MP model with Selected Parameters and Different Climate Forecast Scenarios} \\
+                    };
+
+% DET
+            \path   (hydrofor.south west)+(-11+\distsmall,-2.7*\vdistsmall)  
+                    node (dethydro)
+                    [blocksmall,
+                     fill=brown!20
+                    ]
+                    {\textbf{DET} \\
+                      Single BMA SF Forecast
+                    };
+% SPWR-D
+            \path   (hydrofor.south)+(0,-2.7*\vdistsmall)  
+                    node (spwrdhdyro)
+                    [blocksmall,
+                     fill=brown!20
+                    ]
+                    {\textbf{SPWRD} \\
+                      BMA + Raw SF Forecast 
+                    };
+% SPWR-S
+            \path   (hydrofor.south east)+(-2.25*\vdistsmall,-2.70*\vdistsmall)  
+                    node (spwrshydro)
+                    [blocksmall,
+                     fill=brown!20
+                    ]
+                    {\textbf{SPWRS} \\
+                      Raw SF Forecasts
+                    };
+        
+
+
 
 
             \begin{pgfonlayer}{background}
@@ -247,8 +338,40 @@
                      rectangle
                      (11.13,0.35);
 
+%%------------------ Hydrologic Forecasting Module (Background)
+                \path[fill=brown!10,
+                      rounded corners,
+                      draw=black!50,
+                      dashed
+                     ]
+                     (selectparam.south west)+(-0.3*\vdistsmall,-0.55*\vdistsmall)
+                     rectangle
+                     (11.13,-6.63);
+
+%%------------------ Optimization Module (Background)
+                \path[fill=blue!30,
+                      rounded corners,
+                      draw=black!50,
+                      dashed
+                     ]
+                     (opttwo.south west)+(-0.3*\vdistsmall,-0.4*\vdistsmall)
+                     rectangle
+                     (18.5,-6.63);
+
+%%------------------ Visualization Module (Background)
+                \path[fill=red!20,
+                      rounded corners,
+                      draw=black!50,
+                      dashed
+                     ]
+                     (dssfeatures.south west)+(-0.3*\vdistsmall,-0.3*\vdistsmall)
+                     rectangle
+                     (18.5,0.35);
             \end{pgfonlayer}
 
+
+%% Arrows
+           
         \end{tikzpicture}
 
 
