@@ -15,8 +15,8 @@
 
         \begin{tikzpicture}
             % Africa
-            \node[inner sep=0pt] (africa) at (-3.0,-6.5)
-                {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.5pt}\fbox{\includegraphics[width=0.28\textwidth]{Africa-jawra.pdf}}};
+            \node[inner sep=0pt] (africa) at (-1.035,-6.75)
+                {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.5pt}\fbox{\includegraphics[width=0.27\textwidth]{Africa-jawra.pdf}}};
             % Ethiopia
             \node[inner sep=0pt] (ethiopia) at (-0.5,-1.07)
                 {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.5pt}\fbox{\includegraphics[width=0.32\textwidth]{Ethiopia-jawra.pdf}}};
@@ -24,9 +24,9 @@
             \node[inner sep=0pt] (omogibe) at (8.7,-4)
                 {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.5pt}\fbox{\includegraphics[width=0.53\textwidth]{Omo-Gibe-jawra.pdf}}};
             % Draw box and arrows
-            \node (rect) at (-1.65,-1.65) [draw,minimum width=3.6em, minimum height=5.6em,color=red!80] {};
-            \draw[-{Latex[length=3mm, width=1.5mm]},color=red] (rect.south east) -- (7.4,-8.1);
-            \draw[-{Latex[length=3mm, width=1.5mm]},color=red] (rect.north east) -- (8.0,1.0);
+            \node (rect) at (-1.65,-1.65) [draw,minimum width=3.6em, minimum height=5.6em,color=red!80,dashed] {};
+            \draw[-{Latex[length=3mm, width=1.5mm]},color=red,dashed] (rect.south east) -- (7.4,-8.1);
+            \draw[-{Latex[length=3mm, width=1.5mm]},color=red,dashed] (rect.north east) -- (8.0,1.0);
         \end{tikzpicture}
     
 \end{document}

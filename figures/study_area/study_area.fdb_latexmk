@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1587052798 "study_area.tex" "study_area.pdf" "study_area" 1587052799
+["pdflatex"] 1587072976 "study_area.tex" "study_area.pdf" "study_area" 1587072976
   "/etc/texmf/web2c/texmf.cnf" 1556320617 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm" 1480098689 2124 2601a75482e9426d33db523edf23570a ""
@@ -121,9 +121,9 @@
   "Africa-jawra.pdf" 1586938956 631268 98bf3beb92c90268c650c8982b447501 ""
   "Ethiopia-jawra.pdf" 1586938957 167471 6258cb736c94e89976fbc2e623f7bbaf ""
   "Omo-Gibe-jawra.pdf" 1586938958 194470 425a3904a3d9f63cdcfcd167ad077886 ""
-  "study_area.aux" 1587052799 8 a94a2480d3289e625eea47cd1b285758 ""
-  "study_area.tex" 1587052797 1447 f819465b8aef26851f24c82906f15f20 ""
+  "study_area.aux" 1587072976 8 a94a2480d3289e625eea47cd1b285758 ""
+  "study_area.tex" 1587072975 1471 85672645862148c9bb92c5a5f1888627 ""
   (generated)
+  "study_area.log"
   "study_area.pdf"
   "study_area.aux"
-  "study_area.log"
