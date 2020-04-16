@@ -1,10 +1,11 @@
 # Fdb version 3
-["pdflatex"] 1587055094 "om_figure.tex" "om_figure.pdf" "om_figure" 1587055094
+["pdflatex"] 1587073767 "om_figure.tex" "om_figure.pdf" "om_figure" 1587073776
   "/etc/texmf/web2c/texmf.cnf" 1556320617 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr7t.tfm" 1480098688 2520 53e01eef820ca829e42c1333c3fd02b9 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm" 1480098688 4712 9ef4d7d106579d4b136e1529e1a4533c ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1480098701 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb" 1480098746 44648 23115b2a545ebfe2c526c3ca99db8b95 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvr7t.vf" 1480098757 1372 dc841a9f00a1a11b1443367ae6c5588e ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1480098806 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -46,8 +47,8 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1556320704 4127052 41bc5cf5bd86bf26f10260443cd3ab84 ""
   "Power_New_R2-jawra.pdf" 1587054045 7009 93575ba7a5f1e210d60882132189c093 ""
   "Release_New_R2-jawra.pdf" 1587054044 7172 24164230b37a6e63dbb8563bb21cddf6 ""
-  "om_figure.aux" 1587055094 8 a94a2480d3289e625eea47cd1b285758 ""
-  "om_figure.tex" 1587055092 2500 1014eb48258d1fb8526d632ee5946f98 ""
+  "om_figure.aux" 1587073767 8 a94a2480d3289e625eea47cd1b285758 ""
+  "om_figure.tex" 1587073772 2581 ec114df5d78a45987323de4b1f4ece17 ""
   (generated)
   "om_figure.pdf"
   "om_figure.aux"

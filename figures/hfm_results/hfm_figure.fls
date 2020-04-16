@@ -83,6 +83,7 @@ INPUT ./ET_Calibration_New_R1-jawra.pdf
 INPUT Inflow_New_R2-jawra.pdf
 INPUT ./Inflow_New_R2-jawra.pdf
 INPUT ./Inflow_New_R2-jawra.pdf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvr7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map

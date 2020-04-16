@@ -1,10 +1,11 @@
 # Fdb version 3
-["pdflatex"] 1587055004 "hfm_figure.tex" "hfm_figure.pdf" "hfm_figure" 1587055004
+["pdflatex"] 1587073519 "hfm_figure.tex" "hfm_figure.pdf" "hfm_figure" 1587073519
   "/etc/texmf/web2c/texmf.cnf" 1556320617 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr7t.tfm" 1480098688 2520 53e01eef820ca829e42c1333c3fd02b9 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm" 1480098688 4712 9ef4d7d106579d4b136e1529e1a4533c ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1480098701 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb" 1480098746 44648 23115b2a545ebfe2c526c3ca99db8b95 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvr7t.vf" 1480098757 1372 dc841a9f00a1a11b1443367ae6c5588e ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1480098806 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -46,9 +47,9 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1556320704 4127052 41bc5cf5bd86bf26f10260443cd3ab84 ""
   "ET_Calibration_New_R1-jawra.pdf" 1587035560 6887 e52f88822c75b54a6a24b862c773415b ""
   "Inflow_New_R2-jawra.pdf" 1587054043 7250 836d94a9f61f22c63e4a147cf2ea6d7b ""
-  "hfm_figure.aux" 1587055004 8 a94a2480d3289e625eea47cd1b285758 ""
-  "hfm_figure.tex" 1587055002 2508 5cdf903e004ffe3b5e8a993e640d46e7 ""
+  "hfm_figure.aux" 1587073519 8 a94a2480d3289e625eea47cd1b285758 ""
+  "hfm_figure.tex" 1587073517 2590 524ab0f38a4cfb13598630f32b664685 ""
   (generated)
   "hfm_figure.aux"
-  "hfm_figure.pdf"
   "hfm_figure.log"
+  "hfm_figure.pdf"

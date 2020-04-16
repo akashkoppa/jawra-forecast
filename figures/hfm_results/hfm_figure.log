@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.26)  16 APR 2020 18:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.26)  16 APR 2020 23:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -142,11 +142,11 @@ LaTeX Font Info:    ... okay on input line 9.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(2.84544pt, 608.60411pt, 2.84544pt)
-* v-part:(T,H,B)=(2.84544pt, 211.11911pt, 2.84544pt)
+* v-part:(T,H,B)=(2.84544pt, 709.78166pt, 2.84544pt)
 * \paperwidth=614.295pt
-* \paperheight=216.81pt
+* \paperheight=715.47255pt
 * \textwidth=608.60411pt
-* \textheight=211.11911pt
+* \textheight=709.78166pt
 * \oddsidemargin=-69.42455pt
 * \evensidemargin=-69.42455pt
 * \topmargin=-69.42455pt
@@ -226,32 +226,28 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 File: ET_Calibration_New_R1-jawra.pdf Graphic file (type pdf)
 <use ET_Calibration_New_R1-jawra.pdf>
 Package pdftex.def Info: ET_Calibration_New_R1-jawra.pdf  used on input line 31.
-(pdftex.def)             Requested size: 304.30205pt x 173.89043pt.
+(pdftex.def)             Requested size: 578.17204pt x 330.3927pt.
 <Inflow_New_R2-jawra.pdf, id=2, 578.16pt x 361.35pt>
 File: Inflow_New_R2-jawra.pdf Graphic file (type pdf)
 <use Inflow_New_R2-jawra.pdf>
-Package pdftex.def Info: Inflow_New_R2-jawra.pdf  used on input line 32.
-(pdftex.def)             Requested size: 304.30205pt x 190.18578pt.
+Package pdftex.def Info: Inflow_New_R2-jawra.pdf  used on input line 42.
+(pdftex.def)             Requested size: 532.5286pt x 332.84854pt.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./ET_Calibration_New_R1-jawra.pdf> <./Inflow_New_R2-jawra.pdf>] (./hfm_figure.aux) )
+(\end occurred inside a group at level 2)
 
-Overfull \hbox (2.11996pt too wide) in paragraph at lines 31--34
-[] [] 
- []
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./ET_Calibration_New_R1-jawra.pdf> <./Inflow_New_R2-jawra.pdf>] (./hfm_figure.aux) )
-(\end occurred inside a group at level 1)
-
+### simple group (level 2) entered at line 37 ({)
 ### simple group (level 1) entered at line 24 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 2534 strings out of 492982
- 35794 string characters out of 6134896
- 98400 words of memory out of 5000000
- 6077 multiletter control sequences out of 15000+600000
- 5400 words of font info for 16 fonts, out of 8000000 for 9000
+ 2536 strings out of 492982
+ 35813 string characters out of 6134896
+ 98433 words of memory out of 5000000
+ 6078 multiletter control sequences out of 15000+600000
+ 5698 words of font info for 17 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,5n,32p,277b,152s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,5n,32p,277b,192s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on hfm_figure.pdf (1 page, 16508 bytes).
+Output written on hfm_figure.pdf (1 page, 16526 bytes).
 PDF statistics:
  28 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
