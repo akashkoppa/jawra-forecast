@@ -1,0 +1,32 @@
+% -*- TeX:US -*-
+% TeX template to create a flow chart 
+%----------------Preamble-------------------%
+\documentclass{minimal}
+\usepackage[paperwidth=8.5in,paperheight=4.6in,margin=1mm]{geometry}
+\usepackage{tikz}
+\usepackage{amsmath,bm,times}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usetikzlibrary{shapes,arrows,shapes.geometric,arrows.meta}
+
+
+\begin{document}
+
+        \begin{tikzpicture}
+            % Africa
+            \node[inner sep=0pt] (africa) at (-3.0,-6.5)
+                {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.5pt}\fbox{\includegraphics[width=0.28\textwidth]{Africa-jawra.pdf}}};
+            % Ethiopia
+            \node[inner sep=0pt] (ethiopia) at (-0.5,-1.07)
+                {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.5pt}\fbox{\includegraphics[width=0.32\textwidth]{Ethiopia-jawra.pdf}}};
+            % Omo-Gibe
+            \node[inner sep=0pt] (omogibe) at (8.7,-4)
+                {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.5pt}\fbox{\includegraphics[width=0.53\textwidth]{Omo-Gibe-jawra.pdf}}};
+            % Draw box and arrows
+            \node (rect) at (-1.65,-1.65) [draw,minimum width=3.6em, minimum height=5.6em,color=red!80] {};
+            \draw[-{Latex[length=3mm, width=1.5mm]},color=red] (rect.south east) -- (7.4,-8.1);
+            \draw[-{Latex[length=3mm, width=1.5mm]},color=red] (rect.north east) -- (8.0,1.0);
+        \end{tikzpicture}
+    
+\end{document}
