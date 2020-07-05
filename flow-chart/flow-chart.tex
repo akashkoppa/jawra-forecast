@@ -117,7 +117,7 @@
                      fill=blue!20
                     ]
                     {\textbf{Best P Dataset} \\
-                      TRMM.3B42RT
+                      PERSIANN.CDR
                     };
 %%----------------- Climate Forecasting Module
 % Header 
@@ -127,69 +127,100 @@
                      right of=eosmodule, 
                      node distance=\distlarge] 
                      {\textbf{Climate Forecasting Module}};
-% S2S Forecasts 
-            \path   (climmodule.south east)+(-0.5*\distmed,-2.5*\vdistsmall)  
-                    node (s2sdata)
-                    [blockmed,
-                     fill=green!20
-                    ]
-                    {%\textbf{S2S Forecasts} \\
-                     % TIGGE  \\
-                     % NCEP   \\
-                     % ECMWF
-                     \textbf{Short to Medium} \\
-                     NCEP GEFS \\
-                     Canada \\
-                     TIGGE
-                    };
+% % S2S Forecasts 
+%             \path   (climmodule.south east)+(-0.5*\distmed,-2.5*\vdistsmall)  
+%                     node (s2sdata)
+%                     [blockmed,
+%                      fill=green!20
+%                     ]
+%                     {%\textbf{S2S Forecasts} \\
+%                      % TIGGE  \\
+%                      % NCEP   \\
+%                      % ECMWF
+%                      \textbf{Short to Medium} \\
+%                      NCEP GEFS \\
+%                      Canada \\
+%                      TIGGE
+%                     };
                 
-% Seasonal Forecasts 
-            \path   (climmodule.south west)+(0.5*\distmed,-2.5*\vdistsmall)  
-                    node (sdata)
-                    [blockmed,
+% % Seasonal Forecasts 
+%             \path   (climmodule.south west)+(0.5*\distmed,-2.5*\vdistsmall)  
+%                     node (sdata)
+%                     [blockmed,
+%                      fill=green!20
+%                     ]
+%                     {\textbf{Seasonal Forecasts} \\
+%                       NMME  \\
+%                       ENSO
+%                     };
+% Daily
+            \path   (climmodule.south west)+(-11+\distsmall,-2.00*\vdistsmall)  
+                    node (daily)
+                    [blocksmall,
                      fill=green!20
                     ]
-                    {\textbf{Seasonal Forecasts} \\
-                      NMME  \\
-                      ENSO
+                    {\textbf{Daily} \\
+                      NCEP \\
+                      EnvCan \\
+                      TIGGE \\
+
+                    };
+% S2S
+            \path   (climmodule.south)+(0,-2.00*\vdistsmall)  
+                    node (s2s)
+                    [blocksmall,
+                     fill=green!20
+                    ]
+                    {\textbf{S2S} \\
+                      SubX Project 
+                    };
+% Seasonal
+            \path   (climmodule.south east)+(-2.25*\vdistsmall,-2.00*\vdistsmall)  
+                    node (seas)
+                    [blocksmall,
+                     fill=green!20
+                    ]
+                    {\textbf{Seasonal} \\
+                      NMME
                     };
                      
 % Calibration of Forecasts 
-            \path   (climmodule.south)+(0,-6.0*\vdistsmall)  
+            \path   (climmodule.south)+(0,-5.5*\vdistsmall)  
                     node (calibclim)
                     [blocklarge,
                      fill=green!20
                     ]
-                    {\textcolor{red!70}{Step 2:} \textbf{Calibration of Forecasts Using Bayesian Model Averaging} \\
+                    {\textcolor{red!70}{Step 2:} \textbf{Calibration of Forecasts Using 1) Analogue and Quantile Regression and 2) Bayesian Model Averaging} \\
                     };
 
 % Deterministic and Stochastic Forecasts
 % DET
-            \path   (calibclim.south west)+(-11+\distsmall,-2.97*\vdistsmall)  
+            \path   (calibclim.south west)+(-11+\distsmall,-2.00*\vdistsmall)  
                     node (det)
                     [blocksmall,
                      fill=green!20
                     ]
                     {\textbf{DET} \\
-                      Single BMA Forecast
+                        Single Forecast
+                      
                     };
 % SPWR-D
-            \path   (calibclim.south)+(0,-2.97*\vdistsmall)  
+            \path   (calibclim.south)+(0,-2.4*\vdistsmall)  
                     node (spwrd)
                     [blocksmall,
                      fill=green!20
                     ]
                     {\textbf{SPWRD} \\
-                      BMA + Raw Forecast 
+                      Det + Ens Forecast 
                     };
 % SPWR-S
-            \path   (calibclim.south east)+(-2.25*\vdistsmall,-2.97*\vdistsmall)  
+            \path   (calibclim.south east)+(-2.25*\vdistsmall,-2.00*\vdistsmall)  
                     node (spwrs)
                     [blocksmall,
                      fill=green!20
                     ]
                     {\textbf{SPWRS} \\
-                      Raw Forecasts
+                      Ens Forecast
                     };
             
 %%----------------- Visualization Module
@@ -295,7 +326,7 @@
                      fill=brown!20
                     ]
                     {\textbf{DET} \\
-                      Single BMA SF Forecast
+                      Single SF Forecast
                     };
 % SPWR-D
             \path   (hydrofor.south)+(0,-2.7*\vdistsmall)  
@@ -304,7 +335,7 @@
                      fill=brown!20
                     ]
                     {\textbf{SPWRD} \\
-                      BMA + Raw SF Forecast 
+                      Det + Ens SF Forecast 
                     };
 % SPWR-S
             \path   (hydrofor.south east)+(-2.25*\vdistsmall,-2.70*\vdistsmall)  
@@ -313,7 +344,7 @@
                      fill=brown!20
                     ]
                     {\textbf{SPWRS} \\
-                      Raw SF Forecasts
+                      Ensemble SF Forecasts
                     };
         
 
@@ -337,7 +368,7 @@
                       draw=black!50,
                       dashed
                      ]
-                     (det.south west)+(-0.2*\vdistsmall,-0.2*\vdistsmall)
+                     (det.south west)+(-0.2*\vdistsmall,-1.1*\vdistsmall)
                      rectangle
                      (11.13,0.35);
 
@@ -383,12 +414,18 @@
             \path [draw=red!70, ->, dashed,  line width=0.5mm] (spwrd.south)  -- (hydrofor.north -| spwrd.south);
             \path [draw=red!70, ->, dashed,  line width=0.5mm] (spwrs.south)  -- (hydrofor.north -| spwrs.south);
 
+            % \path [draw=black, ->, line width=0.4mm] (calibclim.south)  -- (det.north |- calibclim.south);
+            % \path [draw=black, ->, dashed,  line width=0.2mm] (spwrd.south)  -- (hydrofor.north -| spwrd.south);
+            % \path [draw=black, ->, dashed,  line width=0.2mm] (spwrs.south)  -- (hydrofor.north -| spwrs.south);
+
             \path [draw=red!70, ->, dashed,  line width=0.5mm] (calibhydro.east) -- (dethydro.west |- calibhydro.east); 
             \path [draw=red!70, ->, dashed,  line width=0.5mm] (hydrofor.east) -- (optone.west |- hydrofor.east); 
 
             \path [draw=red!70, -,dashed, line width=0.5mm] (spwrs.east) -- (dssfeatures.south);
             \path [draw=red!70, -,dashed, line width=0.5mm] (hydmodule.north east) -- (dssfeatures.south);
             \path [draw=red!70, ->,dashed, line width=0.5mm] (optmodule.north) -- (dssfeatures.south);
+
+
 
 
         \end{tikzpicture}
